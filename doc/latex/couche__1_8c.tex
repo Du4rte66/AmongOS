@@ -1,0 +1,77 @@
+\hypertarget{couche__1_8c}{}\doxysection{couche\+\_\+1.\+c File Reference}
+\label{couche__1_8c}\index{couche\_1.c@{couche\_1.c}}
+
+
+contient code de la couche 1  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../\+Utils/utils.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{couche__1_8c_ae837af2568916b44d185f33c177c073d}\label{couche__1_8c_ae837af2568916b44d185f33c177c073d}} 
+void {\bfseries init\+\_\+disk\+\_\+os} (const char $\ast$dirname)
+\begin{DoxyCompactList}\small\item\em initialise la variable gloable representant le disque \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{couche__1_8c_a9ae4f17b2ab5ba5717bbce37df07c37f}{compute\+\_\+nblock}} (size\+\_\+t n)
+\item 
+int \mbox{\hyperlink{couche__1_8c_a0c9be4c9bd5aded72bf44b45a1578964}{read\+\_\+block}} (void $\ast$buffer, long pos, size\+\_\+t taille)
+\begin{DoxyCompactList}\small\item\em lis {\itshape taille} octets à la position {\itshape pos} et stocke les informations\textbackslash{} dans {\itshape buffer} \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{couche__1_8c_ac2f7a714ac5977cc787213b05e703deb}{write\+\_\+block}} (void $\ast$buffer, long pos, size\+\_\+t taille)
+\begin{DoxyCompactList}\small\item\em ecris {\itshape taille} octets à la position {\itshape pos} depuis les informations\textbackslash{} dans {\itshape buffer} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{couche__1_8c_ab09695d30a25c0bd318dc856fa3ba2d3}\label{couche__1_8c_ab09695d30a25c0bd318dc856fa3ba2d3}} 
+void {\bfseries shut\+Down\+\_\+disk\+\_\+os} ()
+\begin{DoxyCompactList}\small\item\em Eteint le systeme \textbackslash{} (ecrit une derniere fois la variable dans le fichier et ferme) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+contient code de la couche 1 
+
+contient l\textquotesingle{}interface de la couche 1
+
+\begin{DoxyAuthor}{Author}
+romeo,duarte,chedli,elyes 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+13/03/2022 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{couche__1_8c_a9ae4f17b2ab5ba5717bbce37df07c37f}\label{couche__1_8c_a9ae4f17b2ab5ba5717bbce37df07c37f}} 
+\index{couche\_1.c@{couche\_1.c}!compute\_nblock@{compute\_nblock}}
+\index{compute\_nblock@{compute\_nblock}!couche\_1.c@{couche\_1.c}}
+\doxysubsubsection{\texorpdfstring{compute\_nblock()}{compute\_nblock()}}
+{\footnotesize\ttfamily size\+\_\+t compute\+\_\+nblock (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{n }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+n/\+BLOCK\+\_\+\+SIZE(+1 if \%!=0); 
+\end{DoxyReturn}
+\mbox{\Hypertarget{couche__1_8c_a0c9be4c9bd5aded72bf44b45a1578964}\label{couche__1_8c_a0c9be4c9bd5aded72bf44b45a1578964}} 
+\index{couche\_1.c@{couche\_1.c}!read\_block@{read\_block}}
+\index{read\_block@{read\_block}!couche\_1.c@{couche\_1.c}}
+\doxysubsubsection{\texorpdfstring{read\_block()}{read\_block()}}
+{\footnotesize\ttfamily int read\+\_\+block (\begin{DoxyParamCaption}\item[{void $\ast$}]{buffer,  }\item[{long}]{pos,  }\item[{size\+\_\+t}]{taille }\end{DoxyParamCaption})}
+
+
+
+lis {\itshape taille} octets à la position {\itshape pos} et stocke les informations\textbackslash{} dans {\itshape buffer} 
+
+\begin{DoxyReturn}{Returns}
+1 si erreur, 0 sinon 
+\end{DoxyReturn}
+\mbox{\Hypertarget{couche__1_8c_ac2f7a714ac5977cc787213b05e703deb}\label{couche__1_8c_ac2f7a714ac5977cc787213b05e703deb}} 
+\index{couche\_1.c@{couche\_1.c}!write\_block@{write\_block}}
+\index{write\_block@{write\_block}!couche\_1.c@{couche\_1.c}}
+\doxysubsubsection{\texorpdfstring{write\_block()}{write\_block()}}
+{\footnotesize\ttfamily int write\+\_\+block (\begin{DoxyParamCaption}\item[{void $\ast$}]{buffer,  }\item[{long}]{pos,  }\item[{size\+\_\+t}]{taille }\end{DoxyParamCaption})}
+
+
+
+ecris {\itshape taille} octets à la position {\itshape pos} depuis les informations\textbackslash{} dans {\itshape buffer} 
+
+\begin{DoxyReturn}{Returns}
+1 si erreur, 0 sinon 
+\end{DoxyReturn}

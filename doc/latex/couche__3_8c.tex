@@ -1,0 +1,134 @@
+\hypertarget{couche__3_8c}{}\doxysection{couche\+\_\+3.\+c File Reference}
+\label{couche__3_8c}\index{couche\_3.c@{couche\_3.c}}
+
+
+contient code de la couche 3  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../\+Utils/utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Utils/\+Sha256/sha256.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Utils/\+Sha256/sha256\+\_\+utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}couche\+\_\+1.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}couche\+\_\+3.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{couche__3_8c_af4a589e1180a3e3f7f327c363c3f4c11}\label{couche__3_8c_af4a589e1180a3e3f7f327c363c3f4c11}} 
+int {\bfseries check\+\_\+uid} ()
+\item 
+\mbox{\Hypertarget{couche__3_8c_ad7d1307aa10543b0664cdb155a510130}\label{couche__3_8c_ad7d1307aa10543b0664cdb155a510130}} 
+void {\bfseries read\+\_\+user\+\_\+table} ()
+\begin{DoxyCompactList}\small\item\em lis la table des utilisateurs sur le disque \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{couche__3_8c_af83845f0ec4aeae20057fd425b6f9869}\label{couche__3_8c_af83845f0ec4aeae20057fd425b6f9869}} 
+void {\bfseries write\+\_\+user\+\_\+table} ()
+\begin{DoxyCompactList}\small\item\em ecrit la table des utilisateurs sur le disque \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{couche__3_8c_ad287305b2a26f1851d8eedb46a8304e1}{create\+\_\+root}} ()
+\begin{DoxyCompactList}\small\item\em crée le root \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{couche__3_8c_ae66a86abfcb73a9aef11a6f2cb3b6c0a}{add\+\_\+user}} (char $\ast$login, char $\ast$password)
+\begin{DoxyCompactList}\small\item\em ajoute un utilisateur \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{couche__3_8c_a0068f921ed5613389566e006b2023d0c}{delete\+\_\+user}} (int id\+\_\+user)
+\begin{DoxyCompactList}\small\item\em supprime un utilisateur \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{couche__3_8c_ac41f5332ead3610848e9a8c73adfefa1}\label{couche__3_8c_ac41f5332ead3610848e9a8c73adfefa1}} 
+void {\bfseries print\+\_\+user\+\_\+table} ()
+\begin{DoxyCompactList}\small\item\em affiche la table d\textquotesingle{}utilisateur sous forme \+:~\newline
+iud \+: login \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{couche__3_8c_a05a8268f4f7ce02a3f40b4790279b2d3}{modify\+\_\+login}} (int user\+\_\+id, char $\ast$log)
+\begin{DoxyCompactList}\small\item\em modifie le nom de l\textquotesingle{}utilisateur {\itshape user\+\_\+id} \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{couche__3_8c_a46aa09e6e55c5d04b60296008a4bb54f}{modify\+\_\+password}} (int user\+\_\+id, char $\ast$password)
+\begin{DoxyCompactList}\small\item\em modifie le mot de passe de l\textquotesingle{}utilisateur {\itshape user\+\_\+id} \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{couche__3_8c_af78127ea4977649c6201911350d26a36}{connection}} ()
+\begin{DoxyCompactList}\small\item\em connecte la session à un utilisateur \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+contient code de la couche 3 
+
+\begin{DoxyAuthor}{Author}
+romeo,duarte,chedli,elyes 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+03/2022 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{couche__3_8c_ae66a86abfcb73a9aef11a6f2cb3b6c0a}\label{couche__3_8c_ae66a86abfcb73a9aef11a6f2cb3b6c0a}} 
+\index{couche\_3.c@{couche\_3.c}!add\_user@{add\_user}}
+\index{add\_user@{add\_user}!couche\_3.c@{couche\_3.c}}
+\doxysubsubsection{\texorpdfstring{add\_user()}{add\_user()}}
+{\footnotesize\ttfamily int add\+\_\+user (\begin{DoxyParamCaption}\item[{char $\ast$}]{login,  }\item[{char $\ast$}]{password }\end{DoxyParamCaption})}
+
+
+
+ajoute un utilisateur 
+
+\begin{DoxyReturn}{Returns}
+0 si utilisateur créé, 1 sinon 
+\end{DoxyReturn}
+\mbox{\Hypertarget{couche__3_8c_af78127ea4977649c6201911350d26a36}\label{couche__3_8c_af78127ea4977649c6201911350d26a36}} 
+\index{couche\_3.c@{couche\_3.c}!connection@{connection}}
+\index{connection@{connection}!couche\_3.c@{couche\_3.c}}
+\doxysubsubsection{\texorpdfstring{connection()}{connection()}}
+{\footnotesize\ttfamily int connection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+connecte la session à un utilisateur 
+
+\begin{DoxyReturn}{Returns}
+Id de l\textquotesingle{}utilisateur ou -\/1 si aucun identifiant correspondant 
+\end{DoxyReturn}
+\mbox{\Hypertarget{couche__3_8c_ad287305b2a26f1851d8eedb46a8304e1}\label{couche__3_8c_ad287305b2a26f1851d8eedb46a8304e1}} 
+\index{couche\_3.c@{couche\_3.c}!create\_root@{create\_root}}
+\index{create\_root@{create\_root}!couche\_3.c@{couche\_3.c}}
+\doxysubsubsection{\texorpdfstring{create\_root()}{create\_root()}}
+{\footnotesize\ttfamily int create\+\_\+root (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+crée le root 
+
+\begin{DoxyReturn}{Returns}
+0 si le root est créé, 1 sinon 
+\end{DoxyReturn}
+\mbox{\Hypertarget{couche__3_8c_a0068f921ed5613389566e006b2023d0c}\label{couche__3_8c_a0068f921ed5613389566e006b2023d0c}} 
+\index{couche\_3.c@{couche\_3.c}!delete\_user@{delete\_user}}
+\index{delete\_user@{delete\_user}!couche\_3.c@{couche\_3.c}}
+\doxysubsubsection{\texorpdfstring{delete\_user()}{delete\_user()}}
+{\footnotesize\ttfamily int delete\+\_\+user (\begin{DoxyParamCaption}\item[{int}]{id\+\_\+user }\end{DoxyParamCaption})}
+
+
+
+supprime un utilisateur 
+
+\begin{DoxyReturn}{Returns}
+0 si utilisateur est supprimé, 1 sinon 
+\end{DoxyReturn}
+\mbox{\Hypertarget{couche__3_8c_a05a8268f4f7ce02a3f40b4790279b2d3}\label{couche__3_8c_a05a8268f4f7ce02a3f40b4790279b2d3}} 
+\index{couche\_3.c@{couche\_3.c}!modify\_login@{modify\_login}}
+\index{modify\_login@{modify\_login}!couche\_3.c@{couche\_3.c}}
+\doxysubsubsection{\texorpdfstring{modify\_login()}{modify\_login()}}
+{\footnotesize\ttfamily int modify\+\_\+login (\begin{DoxyParamCaption}\item[{int}]{user\+\_\+id,  }\item[{char $\ast$}]{log }\end{DoxyParamCaption})}
+
+
+
+modifie le nom de l\textquotesingle{}utilisateur {\itshape user\+\_\+id} 
+
+\begin{DoxyReturn}{Returns}
+0 si utilisateur est modifié, 1 sinon 
+\end{DoxyReturn}
+\mbox{\Hypertarget{couche__3_8c_a46aa09e6e55c5d04b60296008a4bb54f}\label{couche__3_8c_a46aa09e6e55c5d04b60296008a4bb54f}} 
+\index{couche\_3.c@{couche\_3.c}!modify\_password@{modify\_password}}
+\index{modify\_password@{modify\_password}!couche\_3.c@{couche\_3.c}}
+\doxysubsubsection{\texorpdfstring{modify\_password()}{modify\_password()}}
+{\footnotesize\ttfamily int modify\+\_\+password (\begin{DoxyParamCaption}\item[{int}]{user\+\_\+id,  }\item[{char $\ast$}]{password }\end{DoxyParamCaption})}
+
+
+
+modifie le mot de passe de l\textquotesingle{}utilisateur {\itshape user\+\_\+id} 
+
+\begin{DoxyReturn}{Returns}
+0 si utilisateur est modifié, 1 sinon 
+\end{DoxyReturn}

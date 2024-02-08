@@ -1,0 +1,74 @@
+\hypertarget{couche__2_8h}{}\doxysection{couche\+\_\+2.\+h File Reference}
+\label{couche__2_8h}\index{couche\_2.h@{couche\_2.h}}
+
+
+contient l\textquotesingle{}interface de la couche 2  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{couche__2_8h_a0cbe4c36e172fec15ef5bcba4d35902a}\label{couche__2_8h_a0cbe4c36e172fec15ef5bcba4d35902a}} 
+void {\bfseries write\+\_\+super\+\_\+block} ()
+\begin{DoxyCompactList}\small\item\em ecris le superblock en tout début du disque \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{couche__2_8h_ab7418f8d7145aa81a2a7d99f2d7807a6}\label{couche__2_8h_ab7418f8d7145aa81a2a7d99f2d7807a6}} 
+void {\bfseries read\+\_\+super\+\_\+block} ()
+\begin{DoxyCompactList}\small\item\em lis le superblock en tout début du disque \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{couche__2_8h_acb5131a89cbfc937264cdfa4c7e9e841}\label{couche__2_8h_acb5131a89cbfc937264cdfa4c7e9e841}} 
+void {\bfseries update\+\_\+first\+\_\+free\+\_\+byte} (int newpos)
+\begin{DoxyCompactList}\small\item\em update la position du premier octet libre à {\itshape newpos} ne pas toucher sauf pour initialiser au premier demarage \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{couche__2_8h_af507648d075771c8319d6aae2395eafa}\label{couche__2_8h_af507648d075771c8319d6aae2395eafa}} 
+void {\bfseries read\+\_\+inodes\+\_\+table} ()
+\begin{DoxyCompactList}\small\item\em lis la table d\textquotesingle{}inode depuis le systeme \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{couche__2_8h_ad520eb28e372764dcdfa1f347302dce5}\label{couche__2_8h_ad520eb28e372764dcdfa1f347302dce5}} 
+void {\bfseries write\+\_\+inodes\+\_\+table} ()
+\begin{DoxyCompactList}\small\item\em ecris la table d\textquotesingle{}inode sur le systeme \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{couche__2_8h_a93893ef8c29bc8aa2672409de7d27ae5}\label{couche__2_8h_a93893ef8c29bc8aa2672409de7d27ae5}} 
+void {\bfseries delete\+\_\+inode} (int index)
+\begin{DoxyCompactList}\small\item\em supprime l\textquotesingle{}inode a l\textquotesingle{}index {\itshape index} et compacte la table \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{couche__2_8h_a47f49cde0ea6b3b43d9c6524ff02194d}{get\+\_\+unused\+\_\+inode}} ()
+\item 
+int \mbox{\hyperlink{couche__2_8h_aef2c6fc5ecc959ce209b7071e5e8cae8}{init\+\_\+inode}} (char $\ast$filename, int pos, int size)
+\begin{DoxyCompactList}\small\item\em Initalise un inode avec quelques informations. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{couche__2_8h_a458d1bc5fa26cf2560b4f239187c1c48}\label{couche__2_8h_a458d1bc5fa26cf2560b4f239187c1c48}} 
+void {\bfseries print\+\_\+inode\+\_\+table} ()
+\begin{DoxyCompactList}\small\item\em print la table d\textquotesingle{}inode \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{couche__2_8h_a0ca0648da2bd176544be8311a0791773}\label{couche__2_8h_a0ca0648da2bd176544be8311a0791773}} 
+void {\bfseries print\+\_\+superblock} ()
+\begin{DoxyCompactList}\small\item\em print les informations du superblock \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+contient l\textquotesingle{}interface de la couche 2 
+
+\begin{DoxyAuthor}{Author}
+romeo,duarte,chedli,elyes 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+03/2022 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{couche__2_8h_a47f49cde0ea6b3b43d9c6524ff02194d}\label{couche__2_8h_a47f49cde0ea6b3b43d9c6524ff02194d}} 
+\index{couche\_2.h@{couche\_2.h}!get\_unused\_inode@{get\_unused\_inode}}
+\index{get\_unused\_inode@{get\_unused\_inode}!couche\_2.h@{couche\_2.h}}
+\doxysubsubsection{\texorpdfstring{get\_unused\_inode()}{get\_unused\_inode()}}
+{\footnotesize\ttfamily int get\+\_\+unused\+\_\+inode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+index du premier inode libre ou -\/1 si aucun de libre 
+\end{DoxyReturn}
+\mbox{\Hypertarget{couche__2_8h_aef2c6fc5ecc959ce209b7071e5e8cae8}\label{couche__2_8h_aef2c6fc5ecc959ce209b7071e5e8cae8}} 
+\index{couche\_2.h@{couche\_2.h}!init\_inode@{init\_inode}}
+\index{init\_inode@{init\_inode}!couche\_2.h@{couche\_2.h}}
+\doxysubsubsection{\texorpdfstring{init\_inode()}{init\_inode()}}
+{\footnotesize\ttfamily int init\+\_\+inode (\begin{DoxyParamCaption}\item[{char $\ast$}]{filename,  }\item[{int}]{pos,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Initalise un inode avec quelques informations. 
+
+\begin{DoxyReturn}{Returns}
+0\texorpdfstring{$>$}{>}= OK, -\/1, si aucune place disponible 
+\end{DoxyReturn}

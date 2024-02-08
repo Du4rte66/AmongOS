@@ -1,0 +1,106 @@
+\hypertarget{couche__5_8h}{}\doxysection{couche\+\_\+5.\+h File Reference}
+\label{couche__5_8h}\index{couche\_5.h@{couche\_5.h}}
+
+
+contient l\textquotesingle{}interface de la couche 5  
+
+
+{\ttfamily \#include \char`\"{}../\+Utils/utils.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+cmd\+\_\+t $\ast$ \mbox{\hyperlink{couche__5_8h_a3b07f8394568cd6ae91b0fb0e2759b4a}{read\+\_\+command}} ()
+\begin{DoxyCompactList}\small\item\em lit une commande en lisant stdin \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{couche__5_8h_a1b8388c2368960003a1f151d4b0980ba}\label{couche__5_8h_a1b8388c2368960003a1f151d4b0980ba}} 
+void {\bfseries free\+\_\+command} (cmd\+\_\+t $\ast$command)
+\begin{DoxyCompactList}\small\item\em libere une commande de type cmd\+\_\+t \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{couche__5_8h_a2d3888c6e7d6e039d775bde016c5b863}{execute\+\_\+command}} (cmd\+\_\+t command)
+\begin{DoxyCompactList}\small\item\em execute la commande \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{couche__5_8h_a29bb903696366356657a2354757a6af4}\label{couche__5_8h_a29bb903696366356657a2354757a6af4}} 
+void {\bfseries ls} (cmd\+\_\+t command)
+\begin{DoxyCompactList}\small\item\em affiche la liste des fichiers du systeme \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{couche__5_8h_ad0bd584cfa909217a2badb81693b5c4e}\label{couche__5_8h_ad0bd584cfa909217a2badb81693b5c4e}} 
+void {\bfseries cat} (cmd\+\_\+t command)
+\begin{DoxyCompactList}\small\item\em affiche le contenu d\textquotesingle{}un fichier \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{couche__5_8h_a6830a5c3745b677695d968363c285cac}\label{couche__5_8h_a6830a5c3745b677695d968363c285cac}} 
+void {\bfseries rm} (cmd\+\_\+t command)
+\begin{DoxyCompactList}\small\item\em supprime un fichier \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{couche__5_8h_a0e557575ea76cbc4619342ac7d489eb8}\label{couche__5_8h_a0e557575ea76cbc4619342ac7d489eb8}} 
+void {\bfseries cr} (cmd\+\_\+t command)
+\begin{DoxyCompactList}\small\item\em créer un fichier \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{couche__5_8h_a472765c645b6e7ca48322302e1b6cbd7}\label{couche__5_8h_a472765c645b6e7ca48322302e1b6cbd7}} 
+void {\bfseries edit} (cmd\+\_\+t command)
+\begin{DoxyCompactList}\small\item\em modifie un fichier \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{couche__5_8h_a91fa9d02fc0192245fd5db1f147d4490}\label{couche__5_8h_a91fa9d02fc0192245fd5db1f147d4490}} 
+void {\bfseries cp} (cmd\+\_\+t command)
+\begin{DoxyCompactList}\small\item\em copie un fichier \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{couche__5_8h_a41cef6729bf2ef0c4851e95bba213098}\label{couche__5_8h_a41cef6729bf2ef0c4851e95bba213098}} 
+void {\bfseries rename\+\_\+file} (cmd\+\_\+t command)
+\begin{DoxyCompactList}\small\item\em renomme un fichier \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{couche__5_8h_a3d2d5fcf7a5bca6d39aca3d2adf5d32f}\label{couche__5_8h_a3d2d5fcf7a5bca6d39aca3d2adf5d32f}} 
+void {\bfseries load} (cmd\+\_\+t command)
+\begin{DoxyCompactList}\small\item\em charge un fichier depuis le systeme hote dans le systeme Among\+OS \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{couche__5_8h_abead97a8288f55391bd9a8dd23aa191f}\label{couche__5_8h_abead97a8288f55391bd9a8dd23aa191f}} 
+void {\bfseries store} (cmd\+\_\+t command)
+\begin{DoxyCompactList}\small\item\em charge un fichier depuis le systeme Among\+OS dans le systeme hote \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{couche__5_8h_aefe6a449469e31eb1ba19105afd78019}\label{couche__5_8h_aefe6a449469e31eb1ba19105afd78019}} 
+void {\bfseries chown} (cmd\+\_\+t command)
+\begin{DoxyCompactList}\small\item\em change l\textquotesingle{}uid d\textquotesingle{}un inode \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{couche__5_8h_a441cf2c68f351e56019ec50ac670c321}\label{couche__5_8h_a441cf2c68f351e56019ec50ac670c321}} 
+void {\bfseries chmod} (cmd\+\_\+t command)
+\begin{DoxyCompactList}\small\item\em change le mode d\textquotesingle{}un fichier \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{couche__5_8h_a8f4d9639a8e9f5f816e636527e8ed2c4}\label{couche__5_8h_a8f4d9639a8e9f5f816e636527e8ed2c4}} 
+void {\bfseries listuser} (cmd\+\_\+t command)
+\begin{DoxyCompactList}\small\item\em liste les utilisateurs du systeme \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{couche__5_8h_a056ab77bb8ddca2d3c2b37a175202708}\label{couche__5_8h_a056ab77bb8ddca2d3c2b37a175202708}} 
+int {\bfseries quit} (cmd\+\_\+t command)
+\begin{DoxyCompactList}\small\item\em quite et sauvegarde \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{couche__5_8h_a2f82f3de5d6f28da72081a968f77763a}\label{couche__5_8h_a2f82f3de5d6f28da72081a968f77763a}} 
+void {\bfseries adduser} (cmd\+\_\+t command)
+\begin{DoxyCompactList}\small\item\em ajoute un utilisateur \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{couche__5_8h_aa86adcbe6fb86e6fa0ca4cbbfface280}\label{couche__5_8h_aa86adcbe6fb86e6fa0ca4cbbfface280}} 
+void {\bfseries rmuser} (cmd\+\_\+t command)
+\begin{DoxyCompactList}\small\item\em supprime un utilisateur \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{couche__5_8h_a97ee70a8770dc30d06c744b24eb2fcfc}\label{couche__5_8h_a97ee70a8770dc30d06c744b24eb2fcfc}} 
+void {\bfseries help} ()
+\begin{DoxyCompactList}\small\item\em affiche le manuel des commandes \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+contient l\textquotesingle{}interface de la couche 5 
+
+\begin{DoxyAuthor}{Author}
+romeo,duarte,chedli,elyes 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+04/2022 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{couche__5_8h_a2d3888c6e7d6e039d775bde016c5b863}\label{couche__5_8h_a2d3888c6e7d6e039d775bde016c5b863}} 
+\index{couche\_5.h@{couche\_5.h}!execute\_command@{execute\_command}}
+\index{execute\_command@{execute\_command}!couche\_5.h@{couche\_5.h}}
+\doxysubsubsection{\texorpdfstring{execute\_command()}{execute\_command()}}
+{\footnotesize\ttfamily int execute\+\_\+command (\begin{DoxyParamCaption}\item[{cmd\+\_\+t}]{command }\end{DoxyParamCaption})}
+
+
+
+execute la commande 
+
+\begin{DoxyReturn}{Returns}
+0 si quit est executée \texorpdfstring{$>$}{>} sinon 
+\end{DoxyReturn}
+\mbox{\Hypertarget{couche__5_8h_a3b07f8394568cd6ae91b0fb0e2759b4a}\label{couche__5_8h_a3b07f8394568cd6ae91b0fb0e2759b4a}} 
+\index{couche\_5.h@{couche\_5.h}!read\_command@{read\_command}}
+\index{read\_command@{read\_command}!couche\_5.h@{couche\_5.h}}
+\doxysubsubsection{\texorpdfstring{read\_command()}{read\_command()}}
+{\footnotesize\ttfamily cmd\+\_\+t $\ast$ read\+\_\+command (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+lit une commande en lisant stdin 
+
+\begin{DoxyReturn}{Returns}
+pointer vers une commande de type cmd\+\_\+t 
+\end{DoxyReturn}
